@@ -17,7 +17,7 @@ public class BookmarkController {
     private BookmarkService bookmarkService;
 
     @GetMapping("/all")
-    public ResponseEntity<List<Bookmark>> getAllUsers() {
+    public ResponseEntity<List<Bookmark>> getAllBookmarks() {
         List<Bookmark> bookmarks = bookmarkService.getAll();
         return ResponseEntity.ok(bookmarks);
     }

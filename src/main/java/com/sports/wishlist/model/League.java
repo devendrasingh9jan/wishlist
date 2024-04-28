@@ -15,6 +15,8 @@ import lombok.Setter;
 @Table(name = "league")
 public class League {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String idLeague;
     private String strSport;
     private String strLeague;
