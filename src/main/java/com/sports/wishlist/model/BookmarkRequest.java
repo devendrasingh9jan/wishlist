@@ -12,8 +12,8 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Bookmark {
-    private Integer id;
+public class BookmarkRequest {
     private String email;
-    private List<League> league;
+    private String country;
+    private List<String> leagues;
 }

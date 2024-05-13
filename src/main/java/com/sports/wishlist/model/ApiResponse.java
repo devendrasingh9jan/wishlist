@@ -1,9 +1,18 @@
 package com.sports.wishlist.model;
 
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
+import lombok.Getter;
 
-@AllArgsConstructor
-public class ApiResponse {
+import java.io.Serializable;
+
+@Getter
+public class ApiResponse implements Serializable {
     private String message;
+    public ApiResponse(String message) {
+        this.message = message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }

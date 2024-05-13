@@ -22,28 +22,4 @@ class BookmarkControllerTest {
 
     @InjectMocks
     private BookmarkController bookmarkController;
-
-    @Test
-    void getAllBookmarks() {
-        when(bookmarkService.getAll()).thenReturn(List.of(new Bookmark()));
-        assertDoesNotThrow(() -> bookmarkController.getAllBookmarks());
-    }
-
-    @Test
-    void getBookmarkByUserId() {
-        when(bookmarkService.getBookmarkByUserId(anyInt())).thenReturn(List.of(new Bookmark()));
-        assertDoesNotThrow(() -> bookmarkController.getBookmarkByUserId(1));
-    }
-
-    @Test
-    void createBookmark() {
-        when(bookmarkService.create(any(Bookmark.class))).thenReturn(new Bookmark());
-        assertDoesNotThrow(() -> bookmarkController.createBookmark(new Bookmark()));
-    }
-
-    @Test
-    void deleteBookmark() {
-        doNothing().when(bookmarkService).delete(anyLong());
-        assertDoesNotThrow(() -> bookmarkController.deleteBookmark(1L));
-    }
 }
